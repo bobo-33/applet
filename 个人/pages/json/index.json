@@ -1,0 +1,40 @@
+{
+  "code": "1",
+  "result": [
+    {
+      "imgUrl":"../images/man-1.png",
+      "name":"麦芽糖的春天",
+      "sex":"male",
+      "level":"LV2",
+      "content":"安切洛蒂执教意大利队？换个好教练也许还能再抵挡一阵子，就像2012和2016欧洲杯上普兰德利和孔蒂所做的那样。",
+      "original_img":[
+          "../images/news.png",
+          "../images/news.png",
+          "../images/news.png"          
+      ],
+      "time": "一天前",
+      "comment":"152"
+    },
+    {
+      "imgUrl": "../images/man-1.png",
+      "name": "麦芽糖",
+      "sex": "female",
+      "level": "LV1",
+      "content": "",
+      "original_img": "",
+      "time": "15小时前",
+      "comment": "15"
+    },
+    {
+      "imgUrl": "../images/man-1.png",
+      "name": "春天",
+      "sex": "male",
+      "level": "LV12",
+      "content": "",
+      "original_img":"",
+      "time": "十五天前",
+      "comment": "2"
+    }
+  ]
+
+}

@@ -1,0 +1,21 @@
+<!--pages/posted/index.wxml-->
+<view>
+  <view class='body'>
+      <view class='textBox'>
+          <textarea placeholder-class='textPlaceholder' placeholder='请您输入文字......'></textarea>          
+      </view>
+      <view class="weui-uploader__bd">
+        <view class="weui-uploader__files">
+          <block wx:for="{{imageList}}" wx:for-item="image">
+            <view class="weui-uploader__file">
+              <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+            </view>
+          </block>
+        </view>
+        <view class="weui-uploader__input-box">
+          <view class="weui-uploader__input" bindtap="chooseImage"></view>
+        </view>
+      </view>
+  </view>
+  <view class='footer'> <view class='bottom'> <navigator>发布</navigator> </view> </view>
+</view>

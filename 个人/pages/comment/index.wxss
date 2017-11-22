@@ -1,0 +1,91 @@
+/* pages/comment/index.wxss */
+/* pages/detail/index.wxss */
+@font-face {
+  font-family: 'iconfont';  /* project id 479304 */
+  src: url('//at.alicdn.com/t/font_479304_t8iux9xen8c9pb9.eot');
+  src: url('//at.alicdn.com/t/font_479304_t8iux9xen8c9pb9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_479304_t8iux9xen8c9pb9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_479304_t8iux9xen8c9pb9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_479304_t8iux9xen8c9pb9.svg#iconfont') format('svg');
+}
+.iconfont::before{font-family:'iconfont';font-style:normal;-webkit-font-smoothing:antialiased;vertical-align: middle;}
+.icon-male::before{content: "\e686";color: #66CCFF}
+.icon-female::before{content: "\e60d";color:#ff1578}
+.icon-write::before{content: "\e6a7";font-size: 24px;color: #666;margin-right: 5px;}
+.body{
+  margin-bottom: 100px;
+}
+.detailContainer{
+  padding: 15px 15px 15px 0;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: linear-gradient(#eaeaea, #eaeaea 50%, transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position:bottom;
+}
+.imgView,
+.imgView image{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.imgView{
+  margin-right: 10px;
+  align-self: flex-start;
+}
+.textView{
+  width: 100%;
+}
+.h1{
+  font-size: 16px;
+  color: #666;
+}
+.icon-female,
+.icon-male{
+  margin: 0 8px;
+}
+.level{
+  padding: 1px 5px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  color: #999;
+  -webkit-transform:scale(0.8);
+  display:inline-block;/*必选项*/
+}
+.time{
+  color: #ccc;
+  font-size: 12px;
+  -webkit-transform:scale(0.8);
+  display:block;/*必选项*/
+  margin-left:-25px;
+
+}
+.article{
+  font-size: 14px;
+}
+.bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer{width: 100%;position: fixed;bottom: 0;left: 0;z-index: 999;}
+.footer .bottom{
+  background: #fff;
+  height:48px;
+  line-height:48px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(#eaeaea, #eaeaea 50%, transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position:top;
+  }
+.iptPlaceholder{
+  font-size: 14px;
+}
+.footer .bottom input{
+  display: inline-flex;
+  vertical-align: middle;
+}

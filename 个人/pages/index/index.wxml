@@ -1,0 +1,103 @@
+<!--index.wxml-->
+<view>
+  <view class='body'>
+    <view class='ul'>
+      <view class='li'>
+          <view class='imgView'> <image src='../images/man-1.png'></image> </view>
+          <view class='textView'>
+              <view class='h1'> 
+                  麦芽糖的春天
+                  <text class='iconfont icon-male'></text> 
+                  <text class='level'>LV2</text>
+              </view>
+              <navigator url='../detail/index' class='liItem'>
+                  <view class='article'>
+                      安切洛蒂执教意大利队？换个好教练也许还能再抵挡一阵子，就像2012和2016欧洲杯上普兰德利和孔蒂所做的那样。
+                  </view>
+                  <view class='Imgs'>
+                      <image src='../images/news.png'></image>
+                      <image src='../images/news.png'></image>
+                      <image src='../images/news.png'></image>
+                  </view>
+              </navigator>              
+              <view class='clearfix'>
+                  <text class='time'>一分钟前</text>
+                  <text class='comment'>152</text>
+              </view> 
+          </view>
+      </view>
+      
+
+      <!-- 音频 -->
+      <view class='li'>
+          <view class='imgView'> <image src='../images/man-1.png'></image> </view>
+          <view class='textView'>
+              <view class='h1'> 
+                  麦芽糖的春天
+                  <text class='iconfont icon-male'></text> 
+                  <text class='level'>LV2</text>
+              </view>
+              <navigator url='' class='liItem'>
+                  <view class='article'>
+                     
+                  </view>
+                  <view class='Imgs'>
+                     <audio id='myAudio' src="{{current.src}}" poster="{{current.poster}}" name="{{current.name}}" author="{{current.author}}" action="{{audioAction}}" controls></audio>
+                  </view>
+                  
+              </navigator>              
+              <view class='clearfix'>
+                  <text class='time'>一分钟前</text>
+                  <text class='comment'>152</text>
+              </view> 
+          </view>
+      </view>
+
+      <!-- 视频 -->
+      <view class='li'>
+          <view class='imgView'> <image src='../images/man-1.png'></image> </view>
+          <view class='textView'>
+              <view class='h1'> 
+                  麦芽糖的春天
+                  <text class='iconfont icon-male'></text> 
+                  <text class='level'>LV2</text>
+              </view>
+              <navigator url='' class='liItem'>
+                  <view class='article'>
+                     
+                  </view>
+                  <view class='Imgs'>
+                    <video id="myVideo"  src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" binderror="videoErrorCallback"  controls></video>
+                  </view>
+                  
+              </navigator>              
+              <view class='clearfix'>
+                  <text class='time'>一分钟前</text>
+                  <text class='comment'>152</text>
+              </view> 
+          </view>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='bottom'>
+        <navigator url='index' class='iconfont icon-home'></navigator>
+        <navigator url='../my/index' class='iconfont icon-my'></navigator>
+        <button class='iconfont icon-plus' bindtap="actionSheetTap"></button>
+        <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange" class="bottomList">
+            <action-sheet-item  class="bottomList-item"> 
+                <navigator class='iconfont icon-wz' url='../posted/index'></navigator>
+            </action-sheet-item>
+            <action-sheet-item  class="bottomList-item"> 
+                <navigator class='iconfont icon-tp' url='../posted/index'></navigator> </action-sheet-item>
+            <action-sheet-item  class="bottomList-item"> 
+                <navigator class='iconfont icon-voice' url='../posted/index'></navigator>  
+            </action-sheet-item>
+            <action-sheet-item  class="bottomList-item"> 
+                <navigator class='iconfont icon-sp' url='../posted/index'></navigator>  
+            </action-sheet-item>
+            <action-sheet-cancel class="cancel" url='../posted/index'>取消</action-sheet-cancel>
+        </action-sheet>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<!--pages/comment/index.wxml-->
+<view>
+  <view class='body'>
+      <view class='detailContainer'>
+          <view class='imgView'> <image src="../images/man-1.png"></image> </view>
+          <view class='textView'>
+              <view class='h1'>
+                  麦芽糖的春天
+                  <text class='iconfont icon-male'></text>
+                  <text class='level'>LV2</text>
+              </view> 
+              <view>
+                  <text class='time'>一分钟前</text>                 
+              </view>
+              <view class='article'>
+                  安切洛蒂执教意大利队？换个好教练也许还能再抵挡一阵子，就像2012和2016欧洲杯上普兰德利和孔蒂所做的那样。
+              </view>
+          </view>
+      </view>     
+  </view>
+  <view class='footer'>
+      <view class='bottom'>
+          <view class='writeComment iconfont icon-write'> 
+              <input type='text' placeholder='点击发布评论' placeholder-class='iptPlaceholder'></input> 
+          </view>         
+      </view>
+  </view>
+</view>
