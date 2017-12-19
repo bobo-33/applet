@@ -1,0 +1,115 @@
+.row{display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
+.line{background-image: linear-gradient(#d8d8d8, #d8d8d8 50%, transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position: bottom;}
+.space{display:block;width:100%;min-height:12px;background-color:#f8f8f8;background-image:-webkit-linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%);background-image:linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%);background-size:100% 1px;background-repeat:no-repeat;background-position:top;}
+
+.search{
+  padding:15px;
+}
+.search .search-input{
+	padding: 0 10px;
+	display: flex;
+	flex-direction: row;
+	height: 35px;
+  border:1px solid #e5e5e5;
+	-moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius:5px;
+	align-items: center;
+}
+.search-icon{
+	width:18px;
+  height:18px;
+  margin-right:5px;
+}
+.search .search-input input{
+  width: 100%;
+  font-size:14px;
+}
+.search-text{
+  
+	top:0px;
+	padding:0px;
+	left: 0rpx;
+	right: 0rpx;
+  margin-left: 10px;
+}
+/**index.wxss**/
+@font-face {
+  font-family: 'iconfont';  /* project id 479304 */
+  src: url('//at.alicdn.com/t/font_479304_1w8ihmncdt7nl8fr.eot');
+  src: url('//at.alicdn.com/t/font_479304_1w8ihmncdt7nl8fr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_479304_1w8ihmncdt7nl8fr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_479304_1w8ihmncdt7nl8fr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_479304_1w8ihmncdt7nl8fr.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-male:before { content: "\e686";color: #66CCFF;margin:0 5px;
+ }
+.icon-female:before { content: "\e60d";color: #ff1578;margin:0 5px;
+ }
+.icon-home::before{content: "\e671"}
+.icon-wd::before{content: "\e60b"}
+.icon-plus::before{content: "\e601"}
+.icon-del::before{content: "\e607"}
+.container{padding: 0}
+.news{
+  margin-bottom: 100px;
+}
+.news-list{
+  justify-content: flex-start;
+  padding: 10px 10px 10px 0;
+  margin-left: 10px;
+}
+.imageView{
+  align-self: flex-start;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.textView{
+  width: 85%;
+}
+.h1{
+  font-size: 16px;
+}
+.level{border:1px solid #ccc;font-size:12px;color:#939393;height:15px;line-height:15px;display:inline-block;width:32px;text-align:center;}
+.article{
+  font-size: 14px;
+  margin: 10px 0;
+}
+.time,.comment{font-size: 12px;color: #939393;}
+.comment{
+  background:#f2f2f2;
+  border-radius:15px;
+  width:63px;
+  height:20px;
+  text-align:center;
+  line-height:20px;
+}
+.comment::after{
+  content: "人评论";
+}
+.article,.article-type{
+  overflow-x: auto;
+}
+.article-type{
+  justify-content: flex-start;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.article-type .image-box{
+  width: 72px;
+  height: 72px;
+  margin:0 10px 10px 0;
+}
+.article-type image,.article-type audio{width: 100%;height: 100%;}
+.article-type audio{line-height: initial;}
+.article-type video{width:296px;height:169px;}

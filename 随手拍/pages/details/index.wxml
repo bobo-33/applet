@@ -1,0 +1,66 @@
+<!--pages/details/index.wxml-->
+<view>
+  <view class='body' hidden="{{ isShow }}">
+      <view class='row line detailContainer'>
+          <image src='{{ info.users.user_face }}' class='imgView'></image>
+          <view>
+              <view class='h1'>
+                  {{ info.users.nickname }}
+                  <text wx:if="{{ info.users.sex == 1 }}"class='iconfont icon-male'></text>
+                  <text wx:else class='iconfont icon-female'></text>
+                  <text class='level'>{{ info.users.level }}</text>
+              </view> 
+              <view class='time'>{{ info.created_at }}</view>
+          </view>
+      </view>
+      <view class='articleDetail'>
+          <view class='article'>{{ info.content }}</view>
+          <view wx:if="{{ info.type == 1 }}" class='article-type'>
+              <view  wx:for="{{ info.body }}" wx:for-item="i" class='image-box'>
+                  <image src='{{ i }}'></image>
+              </view>
+          </view>
+          <view wx:elif="{{ info.type == 2 }}">
+              <audio poster="{{ info.users.user_face }}" name="{{ info.users.nickname }} 录的音" author="{{ info.users.nickname }}" src="{{ info.body }}" id="myAudio" controls loop></audio>
+          </view>
+          <view wx:else class='articleImg'>
+              <video src="{{ info.body }}"  controls ></video>
+          </view>
+      </view>
+      <view wx:if='{{ talkPraise == false }}' class='row articleLike'>
+          <button class='iconfont icon-zan' bindtap="talkPraise" disabled='{{buttonDisabled}}'></button>
+      </view>
+      <view wx:else class='row articleLike'>
+        <button class="iconfont icon-zan color-success" bindtap="clearTalkPraise" disabled='{{buttonDisabled}}'></button>
+      </view>
+      <view class='count_view'>
+        {{ info.praise_user_count }} 人点赞
+      </view>
+      <view class='image_view'>
+        <image wx:for="{{ info.praise_users }}" wx:for-item="i" src='{{ i.user_face }}' ></image>
+      </view>
+    </view>
+    <view class='footer'>
+        <view class='bottom justify-bottom row line'>
+             <view class='writeComment iconfont icon-write'>  
+                <input type='text' placeholder='点击发布评论' placeholder-class='iptPlaceholder' bindtap="showDialogBtn"></input> 
+            </view> 
+            <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+            <view class="modal-dialog" wx:if="{{showModal}}">
+                <view class="modal-content">
+                    <view class="modal-input">
+                        <textarea placeholder-class="input-holder"  class="input" placeholder="写下你的评论..."></textarea>
+                      
+                    </view>
+                </view>
+                <view class="modal-footer">
+                    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+                    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+                </view>
+            </view>
+             <!-- <navigator url='../sendComment/index?id={{ info.id }}' class='iconfont icon-write'>点击发布评论</navigator>   -->
+            <navigator url='../comment/index?id={{ info.id }}' class='iconfont icon-message'> <text>{{ info.comments }}</text> </navigator>
+        </view>
+    </view>
+</view>
+

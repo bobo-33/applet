@@ -1,0 +1,23 @@
+<template name="footer">
+  <view class='footer'>
+    <view class='row bottom'>
+      <navigator url='../index/index' class='home iconfont icon-home' open-type="reLaunch"></navigator>
+      <navigator url="../search/index" class='search iconfont icon-search'></navigator>
+      <navigator url='../message/index' class='message iconfont icon-message'></navigator>
+      <navigator url="../my/index" class='my iconfont icon-wd'></navigator>
+      <button class='btn-add iconfont icon-plus' bindtap="actionSheetTap"></button>
+      <action-sheet hidden="{{actionSheetHidden}}" class="bottomList" bindchange="actionSheetbindchange">
+        <action-sheet-item bindtap="createTalk" data-type='1'  class="bottomList-item"> 
+          <text class='iconfont icon-tp'></text> 
+        </action-sheet-item>
+        <action-sheet-item bindtap="createTalk" data-type='2'  class="bottomList-item"> 
+          <text class='iconfont icon-voice'></text>  
+        </action-sheet-item>
+        <action-sheet-item bindtap="createTalk" data-type='3'  class="bottomList-item"> 
+          <text class='iconfont icon-sp'></text>  
+        </action-sheet-item>
+        <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+      </action-sheet>
+    </view>
+  </view>
+</template>

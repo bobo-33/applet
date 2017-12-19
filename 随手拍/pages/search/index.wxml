@@ -1,0 +1,40 @@
+<view>
+  <view class="search">
+    <view class="search-input">
+        <image class="search-icon" src="../assets/img/ath.png" mode="aspectFit" />
+        <input class="serach-text" name='search_name' confirm-type ="send" value="{{search_name}}" bindinput='searchFocus' placeholder="搜索" placeholder-style="font-size:14px"/>
+        <text class='iconfont icon-del' hidden='{{ closeShow }}'  bindtap='clearCloseShow' ></text>
+    </view>
+  </view>
+  <view class='news'>
+      <view class='row news-list line' wx:for="{{searchList}}">
+          <image src='{{ item.users.user_face }}' class='imageView'></image>
+          <view class='textView'>
+              <view class='h1'> 
+                  {{ item.users.nickname }}
+                  <text wx:if="{{ item.users.sex == 1 }}"class='iconfont icon-male'></text>
+                  <text wx:else class='iconfont icon-female'></text>
+                  <text class='level'>{{ item.users.level }}</text>
+              </view>
+              <view class='article'>
+                  <navigator url='../details/index?id={{ item.id }}'>{{ item.content }}</navigator>
+              </view>
+              <view wx:if="{{ item.type == 1 }}" class='article-type row'>
+                  <view class='image-box' wx:for="{{ item.body }}" wx:for-item="i">
+                      <image  src='{{ i }}'></image>
+                  </view>
+              </view>
+              <view wx:elif="{{ item.type == 2 }}" class='article-type'>
+                  <audio poster="{{ item.users.user_face }}" name="{{ item.users.nickname }} 录的音" author="{{ item.users.nickname }}" src="{{ item.body }}" id="myAudio" controls loop></audio> 
+              </view>
+              <view wx:else class='article-type'>
+                    <video src="{{ item.body }}"  controls ></video>
+              </view>    
+              <view class='row'>
+                  <text class='time'>{{ item.created_at }}</text>
+                  <navigator url='../comment/index?id={{ item.id }}' class='comment'>{{ item.comments }}</navigator>
+              </view> 
+          </view>
+      </view>
+  </view>
+</view>

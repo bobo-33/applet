@@ -1,0 +1,40 @@
+<!--pages/comment/index.wxml-->
+<view>
+  <view class='body'>
+      <block wx:for="{{list}}">
+          <view class='row detailContainer line'>
+              <image src="{{item.form_user_face}}" class='imgView'></image>
+              <view class='textView'>
+                  <view class='h1'>
+                      {{item.form_nickname}}
+                      <text wx:if="{{ item.users.sex == 1 }}"class='iconfont icon-male'></text>
+                      <text wx:else class='iconfont icon-female'></text>
+                      <text class='level'>{{item.level}}</text>
+                  </view>
+                  <text class='time'>{{item.common_time}}</text>  
+                  <view class='article'>{{item.content}}</view>
+              </view>
+          </view>
+      </block>     
+  </view>
+  <view class='footer'>
+      <view class='row bottom line'>
+           <!-- <navigator url='../sendComment/index?id={{talk_id}}' class='btn-click iconfont icon-write'>点击发布评论</navigator>         -->
+           <view class='writeComment iconfont icon-write'>  
+                <input type='text' placeholder='点击发布评论' placeholder-class='iptPlaceholder' bindtap="showDialogBtn"></input> 
+            </view> 
+            <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+            <view class="modal-dialog" wx:if="{{showModal}}">
+                <view class="modal-content">
+                    <view class="modal-input">
+                        <textarea placeholder-class="input-holder"  class="input" placeholder="写下你的评论..."></textarea>
+                    </view>
+                </view>
+                <view class="modal-footer">
+                    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+                    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+                </view>
+            </view>
+      </view>
+  </view>
+</view>

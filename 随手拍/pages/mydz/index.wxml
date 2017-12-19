@@ -1,0 +1,31 @@
+<view class='news'>
+      <view class='news-list row line' wx:for="{{list}}">
+          <image src='{{ item.users.user_face }}' class='imageView'></image>
+          <view class='textView'>
+              <view class='h1'>
+                  {{ item.users.nickname }}
+                  <text wx:if="{{ item.users.sex == 1 }}"class='iconfont icon-male'></text>
+                  <text wx:else class='iconfont icon-female'></text>
+                  <text class='level'>{{ item.users.level }}</text>
+              </view>
+              <navigator url='../details/index?id={{ item.id }}' class='article'>
+                  {{ item.content }}
+              </navigator>
+              <view wx:if="{{ item.type == 1 }}" class='article-type row'>
+                <view class='image-box' wx:for="{{ item.body }}" wx:for-item="i">
+                    <image src='{{ i }}'></image>
+                </view>
+              </view>
+              <view wx:elif="{{ item.type == 2 }}" class='article-type row'>
+                <audio poster="{{ item.users.user_face }}" name="{{ item.users.nickname }} 录的音" author="{{ item.users.nickname }}" src="{{ item.body }}" id="myAudio" controls loop></audio> 
+              </view>
+              <view wx:else class='article-type row'>
+                  <video src="{{ item.body }}"  controls ></video>
+              </view>
+              <view class='row'>
+                <text class='time'>{{ item.created_at }}</text>
+                <navigator url='../comment/index?id={{ item.id }}' class='comment'>{{ item.comments }}</navigator>
+              </view>
+          </view>
+      </view>
+</view>

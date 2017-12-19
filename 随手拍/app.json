@@ -1,0 +1,23 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/my/index",
+    "pages/details/index",
+    "pages/photo/index",
+    "pages/comment/index",
+    "pages/sendComment/index",
+    "pages/audio/index",
+    "pages/video/index",
+    "pages/take/index",
+    "pages/search/index",
+    "pages/message/index",
+    "pages/mytalks/index",
+    "pages/mydz/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "赤峰随手拍",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,9 @@
+<!--pages/photo/index.wxml-->
+<view>
+  <form bindsubmit="bindFormSubmit" catchreset="formReset">
+    <view class='textBox'>
+        <textarea placeholder-class='textPlaceholder' placeholder='请您输入文字......'></textarea>          
+    </view>
+    <view class='footer'> <view class='bottom'> <button form-type="submit" class="btn-click"> 发布 </button> </view> </view>
+  </form>
+</view>

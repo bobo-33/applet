@@ -1,0 +1,53 @@
+<!----------------------------全局包含层-------------------------------->
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:{{screenWidth/2}}px'>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <navigator url='{{item.ad_skip_describe}}{{item.ad_object_aim}}' class='content'>
+           <image src="{{item.ad_object_thumb}}" class="slide-image" lazy-load />
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+ 
+  <view class='row list'>
+    <navigator url='../audio/index'>声</navigator>
+    <navigator url='../video/index'>影</navigator>
+    <navigator url='../take/index'>拍</navigator>
+  </view>
+  <view class='space'></view>
+  <view class='news'>
+      <view class='row news-list line' wx:for="{{list}}">
+          <image src='{{ item.users.user_face }}' class='imageView'></image>
+          <view class='textView'>
+              <view class='h1'> 
+                  {{ item.users.nickname }}
+                  <text wx:if="{{ item.users.sex == 1 }}"class='iconfont icon-male'></text>
+                  <text wx:else class='iconfont icon-female'></text>
+                  <text class='level'>{{ item.users.level }}</text>
+              </view>
+              <navigator class='article' url='../details/index?id={{ item.id }}'>
+                  {{ item.content }}
+              </navigator>
+              <view wx:if="{{ item.type == 1 }}" class='row article-type'>
+                  <view wx:for="{{ item.body }}" wx:for-item="i" class='image-box'>
+                      <image   src='{{ i }}'></image>
+                  </view>
+              </view>
+              <view wx:elif="{{ item.type == 2 }}" class='row article-type'>
+                    <audio poster="{{ item.users.user_face }}" name="{{ item.users.nickname }} 录的音" author="{{ item.users.nickname }}" src="{{ item.body }}" id="myAudio" controls loop></audio> 
+              </view>
+              <view wx:else class='row article-type'>
+                      <video src="{{ item.body }}"  controls ></video>
+              </view>    
+              <view class='row'>
+                    <text class='time'>{{ item.created_at }}</text>
+                    <navigator url='../comment/index?id={{ item.id }}' class='comment'>{{ item.comments }}</navigator>
+              </view> 
+          </view>
+      </view>
+  </view>
+  <import src ="../footer/footer.wxml"/>
+  <template is="footer" data="{{actionSheetHidden}}"/>
+</view>
+

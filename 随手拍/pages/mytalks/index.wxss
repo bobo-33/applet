@@ -1,0 +1,86 @@
+/* pages/my/index.wxss */
+@font-face {
+  font-family: 'iconfont';  /* project id 479304 */
+  src: url('//at.alicdn.com/t/font_479304_tuwkqpp61jl6usor.eot');
+  src: url('//at.alicdn.com/t/font_479304_tuwkqpp61jl6usor.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_479304_tuwkqpp61jl6usor.woff') format('woff'),
+  url('//at.alicdn.com/t/font_479304_tuwkqpp61jl6usor.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_479304_tuwkqpp61jl6usor.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-del:before { content: "\e607";font-size: 16px;color: #FF3300; }
+
+.row{display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
+.line{background-image: linear-gradient(#d8d8d8, #d8d8d8 50%, transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position: bottom;}
+
+.news{
+  margin-bottom: 100px;
+}
+.news-list{
+  padding: 10px 10px 10px 0;
+  margin-left: 10px;
+}
+.textView{
+  width: 95%;
+}
+.h1{
+  font-size: 16px;
+}
+.level{border:1px solid #ccc;font-size:12px;color:#939393;height:15px;line-height:15px;display:inline-block;width:32px;text-align:center;}
+.article{
+  font-size: 14px;
+  margin: 10px 0;
+}
+.time,.comment{font-size: 12px;color: #939393;}
+.comment{
+  float: right;
+  background:#f2f2f2;
+  border-radius:15px;
+  width:63px;
+  height:20px;
+  text-align:center;
+  line-height:20px;
+}
+.comment::after{
+  content: "人评论";
+}
+.article,.article-type{
+  overflow-x: auto;
+}
+.article-type{
+  justify-content: flex-start;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.article-type .image-box{
+  width: 72px;
+  height: 72px;
+  margin:0 10px 10px 0;
+}
+.article-type image,.article-type audio{width: 100%;height: 100%;}
+.article-type audio{line-height: initial;}
+.article-type video{width:296px;height:169px;}
+.clearfix{overflow: hidden}
+
+
+button{
+  margin: 0;
+  padding: 0;
+  line-height:initial;
+  border-radius:0;
+  background-color:none !important;
+
+}
+button::after{
+  border: none;
+}
+.button-hover{
+  background: initial;
+}
+

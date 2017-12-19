@@ -1,0 +1,11 @@
+<view>
+    <view class='news'>
+        <view class='news-list row line' wx:for='{{ list }}'>
+            <image src='{{ item.form_user_face }}' class='imageView'></image>
+            <view class='textView'>
+                <view class='time'>{{ item.common_time }}</view>
+                <view class='article' bindtap='checkTalkInfo' data-id="{{ item.talk_id }}">{{ item.form_nickname }}: 在您的心声中评论了您</view>
+            </view>
+        </view>
+    </view> 
+</view>

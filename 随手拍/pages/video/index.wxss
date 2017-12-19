@@ -1,0 +1,72 @@
+/**index.wxss**/
+@font-face {
+  font-family: 'iconfont';  /* project id 479304 */
+  src: url('//at.alicdn.com/t/font_479304_b9h8ueb8hj90be29.eot');
+  src: url('//at.alicdn.com/t/font_479304_b9h8ueb8hj90be29.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_479304_b9h8ueb8hj90be29.woff') format('woff'),
+  url('//at.alicdn.com/t/font_479304_b9h8ueb8hj90be29.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_479304_b9h8ueb8hj90be29.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-male:before { content: "\e686";color: #66CCFF;margin:0 5px;
+ }
+.icon-female:before { content: "\e60d";color: #ff1578;margin:0 5px;
+ }
+
+
+.row{display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
+.line{background-image: linear-gradient(#d8d8d8, #d8d8d8 50%, transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position: bottom;}
+.news{
+  margin-bottom: 100px;
+}
+.news-list{
+  justify-content: flex-start;
+  padding: 10px 10px 10px 0;
+  margin-left: 10px;
+}
+.imageView{
+  align-self: flex-start;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.textView{
+  width: 85%;
+}
+.h1{
+  font-size: 16px;
+}
+.level{border:1px solid #ccc;font-size:12px;color:#939393;height:15px;line-height:15px;display:inline-block;width:32px;text-align:center;}
+.article{
+  font-size: 14px;
+  margin: 10px 0;
+}
+.time,.comment{font-size: 12px;color: #939393;}
+.comment{
+  background:#f2f2f2;
+  border-radius:15px;
+  width:63px;
+  height:20px;
+  text-align:center;
+  line-height:20px;
+}
+.comment::after{
+  content: "人评论";
+}
+.article,.article-type{
+  overflow-x: auto;
+}
+.article-type{
+  justify-content: flex-start;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.article-type video{width:296px;height:169px;}

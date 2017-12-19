@@ -1,0 +1,32 @@
+<!--pages/my/index.wxml-->
+<view>
+    <view class='body'>
+         <view class='userInfo' style="height:{{systemInfo.windowWidth/2}}px;">
+              <view class='userImg'>
+                  <image src='{{ userInfo.face }}'></image>   
+              </view>
+              <view class='h1'>
+                {{ userInfo.nickname }}
+                <text wx:if="{{ userInfo.sex == 1 }}"class='iconfont icon-male'></text>
+                <text wx:else class='iconfont icon-female'></text>
+                <text class='level'>{{ userInfo.level }}</text>
+              </view>
+          </view>
+          <view class='space'></view>
+          <view class='items'>
+              <navigator url="../mytalks/index" class='item-list row line'>
+                  我的发布
+                  <text class='iconfont icon-right'></text>
+              </navigator>
+              <navigator url="../mydz/index" class='item-list row'>
+                  我的点赞
+                  <text class='iconfont icon-right'></text>
+              </navigator>
+          </view>
+         
+        
+    </view> 
+    <import src ="../footer/footer.wxml"/>
+    <template is="footer" data="{{actionSheetHidden}}"/>   
+</view>
+
